@@ -1,5 +1,5 @@
 ## Patch and Merge 
-1. Can create patches from both 2D or 3D images
+1. Can create patches from both 2D and 3D images
 2. Can merge 2D or 3D patches 
 
 As for 3D, the primary focus is 3D CT data. The data should be converted to an array before making 3D patches. 
