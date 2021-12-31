@@ -1,0 +1,4 @@
+pandas == 0.24.2
+numpy >= 1.20.1
+scipy
+pillow
