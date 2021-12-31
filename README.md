@@ -6,6 +6,16 @@ As for 3D, the primary focus is 3D CT data. The data should be converted to an a
 
 So, the 2D image or 3D volume is needed to convert to an array first.
 
+### How to install
+```
+pip install jenti
+```
+
+### How to import
+```
+from jenti import patch
+```
+
 ### How to use
 Sample demonstration on how to use this code is given in `test.py` and `test.ipynb`.
 
