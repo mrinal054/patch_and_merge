@@ -13,7 +13,7 @@ pip install jenti
 
 ### How to import
 ```
-from jenti import patch
+from jenti.patch import Patch
 ```
 
 ### How to use
