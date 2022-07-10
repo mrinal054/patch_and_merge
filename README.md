@@ -101,13 +101,13 @@ for name in names:
     p = p['p']
     patches.append(p)
     
-merge = Merge(info, org_shape, dtype='<i2') # signed 2-byte integer
+merge = Merge(info, org_shape, dtype='int64') 
 merged = merge.merge3d(patches)
 sio.savemat('merged3d.mat', {'m': merged}, do_compression=True)
 ```
 Method 2: Provide only the patch directory.
 ```python
-merge = Merge(info, org_shape, dtype='<i2') # signed 2-byte integer
+merge = Merge(info, org_shape, dtype='int64') 
 merged = merge.merge_from_dir3d('./save3d') 
 sio.savemat('merged3d.mat', {'m': merged}, do_compression=True)
 ```
