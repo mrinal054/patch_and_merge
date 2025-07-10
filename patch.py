@@ -91,7 +91,8 @@ class Patch:
                                                  'sIdx_ax1', 'eIdx_ax1',
                                                  'sIdx_ax2', 'eIdx_ax2'])
                     
-                        df = df.append(temp, ignore_index=True)                
+                        # df = df.append(temp, ignore_index=True) # deprecated in Pandas 2.0
+                        df = pd.concat([df, pd.DataFrame([temp])], ignore_index=True)   
                         patch_no += 1
         if self.csv_output:                
             df.to_csv(self.patch_name + '.csv', index=False)
@@ -174,7 +175,8 @@ class Patch:
                                                  'sIdx_ax4', 'eIdx_ax4'])
                         
                         if self.csv_output:   
-                            df = df.append(temp, ignore_index=True)                
+                            # df = df.append(temp, ignore_index=True) # deprecated in Pandas 2.0
+                            df = pd.concat([df, pd.DataFrame([temp])], ignore_index=True)   
                         patch_no += 1
                         
         df.to_csv(self.patch_name + '.csv', index=False)
